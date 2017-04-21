@@ -4,7 +4,7 @@
     <TargetFramework>netstandard1.3</TargetFramework>
     <Title>Prometheus Tools</Title>
     <PackageId>Prometheus.Tools</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <Authors>EG A/S</Authors>
     <Owners>EG A/S</Owners>
     <Description>.NET prometheus middleware for easy request duration metrics</Description>
