@@ -1,7 +1,8 @@
 # dotnet-prometheus-middleware
-.NET middleware for prometheus metrics
+.NET tools for prometheus metrics
 
-This middleware is designed to enable easy metrics logging of request durations.
+## Middleware
+The middleware is designed to enable easy metrics logging of request durations.
 
 The package is currently depending on the Prometheus.Client nuget package. Information on how to use it can be found here: [https://github.com/phnx47/Prometheus.Client](https://github.com/phnx47/Prometheus.Client)
 

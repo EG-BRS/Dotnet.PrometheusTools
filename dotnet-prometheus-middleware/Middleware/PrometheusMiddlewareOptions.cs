@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace dotnet_prometheus_middleware
+namespace PrometheusTools.Middleware
 {
     public class PrometheusMiddlewareOptions
     {

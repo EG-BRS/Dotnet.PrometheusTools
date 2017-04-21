@@ -3,7 +3,7 @@ using Prometheus.Client;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace dotnet_prometheus_middleware
+namespace PrometheusTools.Middleware
 {
     public class PrometheusMiddlware
     {

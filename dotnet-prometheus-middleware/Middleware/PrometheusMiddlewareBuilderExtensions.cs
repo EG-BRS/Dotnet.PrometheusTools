@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using System;
 
-namespace dotnet_prometheus_middleware
+namespace PrometheusTools.Middleware
 {
     public static class PrometheusMiddlewareBuilderExtensions
     {

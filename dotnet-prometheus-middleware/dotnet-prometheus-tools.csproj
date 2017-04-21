@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <Title>Prometheus Tools</Title>
+    <PackageId>Prometheus.Tools</PackageId>
+    <PackageVersion>1.0.2</PackageVersion>
+    <Authors>EG A/S</Authors>
+    <Owners>EG A/S</Owners>
+    <Description>.NET prometheus middleware for easy request duration metrics</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <Copyright>Copyright 2016 (c) EG A/S. All rights reserved.</Copyright>
+    <PackageTags>prometheus metrics middleware</PackageTags>
+    <PackageLicenseUrl>https://github.com/EG-Xena/dotnet-prometheus-middleware/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/EG-Xena/dotnet-prometheus-middleware</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/EG-Xena/dotnet-prometheus-middleware</RepositoryUrl>
+    <RootNamespace>PrometheusTools</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prometheus.Client" Version="1.0.0-alpha2" />
+  </ItemGroup>
+
+</Project>
