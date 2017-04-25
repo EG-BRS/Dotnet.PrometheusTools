@@ -1,5 +1,15 @@
 # dotnet-prometheus-middleware
-.NET tools for prometheus metrics
+.NET Core tools for prometheus metrics
+
+Suggestions for improvements or additional tools are most welcome!
+
+# Installation
+Install the Prometheus.Tools nuget package
+```
+Install-Package Prometheus.Tools
+```
+
+# Usage
 
 ## Middleware
 The middleware is designed to enable easy metrics logging of request durations.
@@ -21,7 +31,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 }
 ```
 
-In the above example any routes with `swagger` iincludes will be excluded from the metrics and not be logged. If you do not want to exclude any routes replace it with the below line instead:
+In the above example any routes with `swagger` will be excluded from the metrics and not be logged. If you do not want to exclude any routes replace it with the below line instead:
 
 ```csharp
     app.UsePrometheusMiddleware();
