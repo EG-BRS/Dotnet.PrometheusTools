@@ -1,5 +1,5 @@
-# dotnet-prometheus-middleware
-.NET Core tools for prometheus metrics
+# Prometheus.Tools
+unofficial .NET Core tools for prometheus metrics
 
 Suggestions for improvements or additional tools are most welcome!
 
