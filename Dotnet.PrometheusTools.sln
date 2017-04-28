@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.PrometheusTools", "Dotnet.PrometheusTools\Dotnet.PrometheusTools.csproj", "{7E16604B-9E3D-44CB-8659-C234BBD9907A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.PrometheusTools.Demo", "Dotnet.PrometheusTools.Demo\Dotnet.PrometheusTools.Demo.csproj", "{71E5826F-E16A-40CB-90E3-439F5F2A4885}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7E16604B-9E3D-44CB-8659-C234BBD9907A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E16604B-9E3D-44CB-8659-C234BBD9907A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E16604B-9E3D-44CB-8659-C234BBD9907A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E5826F-E16A-40CB-90E3-439F5F2A4885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E5826F-E16A-40CB-90E3-439F5F2A4885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E5826F-E16A-40CB-90E3-439F5F2A4885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E5826F-E16A-40CB-90E3-439F5F2A4885}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
