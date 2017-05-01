@@ -35,14 +35,10 @@ namespace PrometheusTools.Middleware
             }
             
             var watch = Stopwatch.StartNew();
-            //var test3 = context.Request.Query.
-            //var test = context.Items["controller"].ToString();
-            //var test2 = context.Request.Form["controller"].ToString();
             await _next.Invoke(context);
 
             var method = context.Request.Method.ToString();
-            var statusCode = context.Response.StatusCode.ToString();
-            
+            var statusCode = context.Response.StatusCode.ToString();            
 
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;
