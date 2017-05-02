@@ -10,7 +10,6 @@ namespace PrometheusTools.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly PrometheusMiddlewareOptions _options;
-        private readonly ActionContextAccessor _action;
         private Summary _summary;
 
         public PrometheusMiddlware(RequestDelegate next, PrometheusMiddlewareOptions options)

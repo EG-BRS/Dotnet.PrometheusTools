@@ -33,7 +33,14 @@ namespace PrometheusTools.Middleware
 
             var watch = Stopwatch.StartNew();
 
+            var action = context.RouteData.Values["action"].ToString();
+            var controller = context.RouteData.Values["controller"].ToString();
+            var method = context.HttpContext.Request.Method;
+
             context.HttpContext.Items.Add("stopwatch", watch);
+            context.HttpContext.Items.Add("action", action);
+            context.HttpContext.Items.Add("controller", controller);
+            context.HttpContext.Items.Add("method", method);
         }
 
         public void OnActionExecuted(ActionExecutedContext context)
