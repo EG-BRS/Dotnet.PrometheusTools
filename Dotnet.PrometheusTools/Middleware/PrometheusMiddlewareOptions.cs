@@ -10,5 +10,6 @@ namespace PrometheusTools.Middleware
         }
 
         public List<string> ExcludeRoutes { get; set; }
+        //public IActionContextAccessor stuff { get; set; }
     }
 }

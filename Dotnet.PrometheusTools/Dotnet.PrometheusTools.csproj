@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFramework>netstandard1.6</TargetFramework>
     <Title>Prometheus Tools</Title>
     <PackageId>Prometheus.Tools</PackageId>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.5</PackageVersion>
     <Authors>EG A/S</Authors>
     <Owners>EG A/S</Owners>
     <Description>.NET prometheus middleware for easy request duration metrics</Description>
@@ -19,6 +19,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Prometheus.Client" Version="1.0.0-alpha2" />
   </ItemGroup>
 

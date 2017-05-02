@@ -50,8 +50,36 @@ Excepted metrics out
 # HELP http_response_time_milliseconds Request duration in milliseconds
 # TYPE http_response_time_milliseconds SUMMARY
 http_response_time_milliseconds_sum{method="GET",route="/quality/api/values",statuscode="200"} 620
-http_response_time_milliseconds_count{method="GET",route="/quality/api/values",statuscode="200"} 25
-http_response_time_milliseconds{method="GET",route="/quality/api/values",statuscode="200",quantile="0.5"} 17
-http_response_time_milliseconds{method="GET",route="/quality/api/values",statuscode="200",quantile="0.9"} 22
-http_response_time_milliseconds{method="GET",route="/quality/api/values",statuscode="200",quantile="0.99"} 22
+http_response_time_milliseconds_count{method="GET",route="/api/values",statuscode="200"} 25
+http_response_time_milliseconds{method="GET",route="/api/values",statuscode="200",quantile="0.5"} 17
+http_response_time_milliseconds{method="GET",route="/api/values",statuscode="200",quantile="0.9"} 22
+http_response_time_milliseconds{method="GET",route="/api/values",statuscode="200",quantile="0.99"} 22
+```
+
+# MvcFilter
+An ActionFilter is available and provides more accurate information than the PrometheusMiddleware in form of the controller and action being called.
+The con is that the metrics are closer to the action and therefore you will get faster request duration metrics from the filter, than you will from the middleware. 
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    var prometheusOptions = new PrometheusMiddlewareOptions();
+    prometheusOptions.ExcludeRoutes.Add("swagger");
+
+    services.AddMvc(options =>
+    {
+        options.Filters.Add(new PrometheusActionFilter(prometheusOptions));
+    });
+}
+```
+
+Expected metrics output
+```
+# HELP http_response_time_milliseconds_v2 Request duration in milliseconds
+# TYPE http_response_time_milliseconds_v2 SUMMARY
+http_response_time_milliseconds_sum{method="GET",controller="Values",action="Get",statuscode="200"} 80
+http_response_time_milliseconds_count{method="GET",controller="Values",action="Get",statuscode="200"} 5
+http_response_time_milliseconds{method="GET",controller="Values",action="Get",statuscode="200",quantile="0.5"} 15
+http_response_time_milliseconds{method="GET",controller="Values",action="Get",statuscode="200",quantile="0.9"} 16
+http_response_time_milliseconds{method="GET",controller="Values",action="Get",statuscode="200",quantile="0.99"} 17
 ```
